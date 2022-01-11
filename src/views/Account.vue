@@ -1,13 +1,13 @@
 <template>
-  <div id="about">
+  <div id="acount">
     <NAVBAR />
-    <h1>This is an about page</h1>
+    <h1>This is an Account page</h1>
     <FOOTER />
   </div>
 </template>
 <style lang="scss" scoped>
 @import "../assets/styles/variables.scss";
-@import "../assets/styles/about.scss";
+@import "../assets/styles/account.scss";
 </style>
 
 <script>
