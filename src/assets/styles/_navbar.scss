@@ -21,6 +21,7 @@
     ul{
       display: inline-block;
       list-style: none;
+      max-height: 0;
       @media only screen and (max-width: 800px) {
         position: absolute;
         top: 70px;

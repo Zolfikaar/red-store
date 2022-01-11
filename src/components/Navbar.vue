@@ -28,6 +28,7 @@
       ><img class="cart-icon" src="../../public/img/home-imgs/images/cart.png"
     /></router-link>
     <img
+      id="search-icon"
       class="menu-icon"
       src="../../public/img/home-imgs/images/menu.png"
       @click="menuToggle()"
@@ -40,14 +41,29 @@
 <script>
 export default {
   methods: {
-    menuToggle() {
-      var menuItem = document.getElementById("menuItem");
-      menuItem.style.maxHeight = "0px";
-      if (menuItem.style.maxHeight == "0px") {
-        menuItem.style.maxHeight = "200px";
-      } else {
-        menuItem.style.maxHeight = "0px";
-      }
+    // menuToggle() {
+    //   var menuItem = document.getElementById("menuItem");
+    //   menuItem.style.maxHeight = "0px";
+    //   if (menuItem.style.maxHeight == "0px") {
+    //     menuItem.style.maxHeight = "200px";
+    //   } else {
+    //     menuItem.style.maxHeight = "0px";
+    //   }
+    // },
+    menuToggle(){
+      let menuList = document.getElementById("menuItem");
+      let toggleBtn = document.getElementById("menu-icon");
+
+      toggleBtn.addEventListener("click", () => {
+        
+        toggleBtn.classList.toggle("active");
+        if(toggleBtn.classList.contains('active') && menuList.style.maxHeight == "0px"){
+          menuList.style.maxHeight = "200px";
+        }else{
+          menuList.style.maxHeight = "0px";
+        }
+      });
+
     },
     addActiveClass() {
       let listItem = document.getElementsByClassName(
